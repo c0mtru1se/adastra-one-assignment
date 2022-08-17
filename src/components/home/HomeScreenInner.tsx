@@ -1,6 +1,6 @@
 import React from 'react';
-import { LoadingArticleBox } from '../loading/LoadingComponents';
+import { LoadingBookBox } from '../loading/LoadingComponents';
 
 export const HomeScreenInner = () => {
-  return <LoadingArticleBox />;
+  return <LoadingBookBox />;
 };

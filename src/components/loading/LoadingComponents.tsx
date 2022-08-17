@@ -22,6 +22,7 @@ const LoadingRect = (props: {
       duration: 1000,
       useNativeDriver: true,
     };
+
     Animated.loop(
       Animated.sequence([
         Animated.timing(pulseAnim, {
@@ -79,7 +80,7 @@ const LoadingBox = ({ style, ...rest }: ViewProps) => (
   />
 );
 
-export const LoadingArticleBox = () => {
+export const LoadingBookBox = () => {
   const boxes = new Array(3).fill(0);
   const boxWidth = 100;
 
