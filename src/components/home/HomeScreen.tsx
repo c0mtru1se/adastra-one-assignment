@@ -1,11 +1,13 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { HomeScreenInner } from './HomeScreenInner';
 
 export const HomeScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.container}>
         <Text style={styles.heading}>Books collection</Text>
+        <HomeScreenInner />
       </View>
     </SafeAreaView>
   );
