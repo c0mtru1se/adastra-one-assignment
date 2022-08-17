@@ -1,17 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { LoadingArticleBox } from '../loading/LoadingComponents';
 
 export const HomeScreenInner = () => {
-  return (
-    <View style={styles.container}>
-      <Text>Loading...</Text>
-    </View>
-  );
+  return <LoadingArticleBox />;
 };
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'flex-start',
-    justifyContent: 'center',
-  },
-});

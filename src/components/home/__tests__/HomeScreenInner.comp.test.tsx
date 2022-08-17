@@ -3,8 +3,9 @@ import { HomeScreenInner } from '../HomeScreenInner';
 
 describe('HomeScreenInner component', () => {
   it('should display loading state on mount', () => {
-    const { getByText } = render(<HomeScreenInner />);
+    const { getAllByA11yHint } = render(<HomeScreenInner />);
 
-    expect(getByText('Loading...')).toBeTruthy();
+    expect(getAllByA11yHint('Loading box')[0]).toBeTruthy();
+    expect(getAllByA11yHint('Loading box').length).toBe(3);
   });
 });

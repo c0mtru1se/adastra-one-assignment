@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   },
   container: {
     left: 16,
-    top: 32,
+    top: 52,
   },
   heading: {
     fontSize: 36,
