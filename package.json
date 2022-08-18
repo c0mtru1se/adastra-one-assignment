@@ -8,7 +8,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "prepare": "husky install",
-    "lint": "./node_modules/.bin/eslint --quiet src App.tsx"
+    "lint": "./node_modules/.bin/eslint --quiet src App.tsx",
+    "t": "jest --coverage"
   },
   "dependencies": {
     "@react-navigation/native": "^6.0.11",

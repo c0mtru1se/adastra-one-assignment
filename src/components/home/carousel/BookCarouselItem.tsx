@@ -3,14 +3,21 @@ import { View, Text, StyleSheet } from 'react-native';
 import { BookShape } from '../../../models/Book';
 import { CoverImage } from '../../detail/CoverImage';
 import { BookCarouselItemContainer } from './BookCarouselItemContainer';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
+import { RootStackParamList } from '../../../navigation/types/RootStackParamList';
 
 type BookCarouselItemProps = {
   item: BookShape;
 };
 
 export const BookCarouselItem = ({ item }: BookCarouselItemProps) => {
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+
   return (
-    <BookCarouselItemContainer key={item.title + item.id}>
+    <BookCarouselItemContainer
+      key={item.title + item.id}
+      onPress={() => navigation.navigate('BookDetail', item)}
+    >
       <CoverImage book={item} style={styles.coverImage} />
       <View style={styles.textContainer}>
         <Text style={styles.authorText} numberOfLines={1}>

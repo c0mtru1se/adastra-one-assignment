@@ -1,25 +1,31 @@
 import React from 'react';
 import {
+  Pressable,
   StyleProp,
   StyleSheet,
-  View,
   ViewProps,
   ViewStyle,
 } from 'react-native';
 
 type BookCarouselItemContainerProps = ViewProps & {
   style?: StyleProp<ViewStyle>;
+  onPress: () => void;
 };
 
 export const BookCarouselItemContainer = ({
   style,
   children,
+  onPress,
   ...rest
 }: BookCarouselItemContainerProps) => {
   return (
-    <View style={StyleSheet.compose(style, styles.itemContainer)} {...rest}>
+    <Pressable
+      style={StyleSheet.compose(style, styles.itemContainer)}
+      onPress={onPress}
+      {...rest}
+    >
       {children}
-    </View>
+    </Pressable>
   );
 };
 
