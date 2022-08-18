@@ -90,7 +90,16 @@ export const LoadingBookBox = () => {
         {boxes.map((_box, index) => (
           <LoadingBox key={index} style={{ width: boxWidth }}>
             <LoadingRect width={boxWidth} height={100} />
-            <LoadingRect width={boxWidth} height={20} style={{ top: 8 }} />
+            <LoadingRect
+              width={boxWidth - 65}
+              height={20}
+              style={{ marginTop: 8 }}
+            />
+            <LoadingRect
+              width={boxWidth}
+              height={20}
+              style={{ marginTop: 4 }}
+            />
           </LoadingBox>
         ))}
       </Row>
