@@ -7,7 +7,7 @@ export type CoverImageProps = {
   book: BookShape;
 } & Omit<ImageProps, 'source'>;
 
-export const CoverImage = ({ book, ...rest }: CoverImageProps) => {
+export const BookCoverImage = ({ book, ...rest }: CoverImageProps) => {
   const { image, title } = book;
 
   return (

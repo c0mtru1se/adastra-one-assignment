@@ -1,10 +1,12 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { BookShape } from '../../../models/Book';
-import { CoverImage } from '../../detail/CoverImage';
+import { BookCoverImage } from '../../common/BookCoverImage';
 import { BookCarouselItemContainer } from './BookCarouselItemContainer';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 import { RootStackParamList } from '../../../navigation/types/RootStackParamList';
+import { BookAuthorText } from '../../common/BookAuthorText';
+import { BookTitleText } from '../../common/BookTitleText';
 
 type BookCarouselItemProps = {
   item: BookShape;
@@ -18,14 +20,10 @@ export const BookCarouselItem = ({ item }: BookCarouselItemProps) => {
       key={item.title + item.id}
       onPress={() => navigation.navigate('BookDetail', item)}
     >
-      <CoverImage book={item} style={styles.coverImage} />
+      <BookCoverImage book={item} style={styles.coverImage} />
       <View style={styles.textContainer}>
-        <Text style={styles.authorText} numberOfLines={1}>
-          {item.author}
-        </Text>
-        <Text style={styles.titleText} numberOfLines={1}>
-          {item.title}
-        </Text>
+        <BookAuthorText author={item.author} />
+        <BookTitleText title={item.title} />
       </View>
     </BookCarouselItemContainer>
   );
@@ -42,18 +40,5 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     marginTop: 'auto',
     justifyContent: 'center',
-  },
-  authorText: {
-    marginBottom: 4,
-    color: '#9D9D9D',
-    fontWeight: '600',
-    textAlign: 'right',
-  },
-  titleText: {
-    color: '#000',
-    fontWeight: '700',
-    letterSpacing: 0.7,
-    fontSize: 18,
-    textAlign: 'left',
   },
 });

@@ -14,7 +14,18 @@ export const RootStack = () => {
       }}
     >
       <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="BookDetail" component={BookDetailScreen} />
+      <Stack.Screen
+        name="BookDetail"
+        component={BookDetailScreen}
+        options={{
+          headerShown: true,
+          headerTransparent: true,
+          headerTitle: '',
+          headerTintColor: '#000',
+          headerBackTitleVisible: false,
+          gestureEnabled: true,
+        }}
+      />
     </Stack.Navigator>
   );
 };

@@ -4,7 +4,7 @@ import { HomeScreenInner } from './HomeScreenInner';
 
 export const HomeScreen = () => {
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.containerWrapper}>
       <View style={styles.container}>
         <Text style={styles.heading}>Books collection</Text>
         <HomeScreenInner />
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f3f5f9',
   },
   container: {
-    left: 16,
+    left: 32,
     top: 52,
   },
   heading: {
