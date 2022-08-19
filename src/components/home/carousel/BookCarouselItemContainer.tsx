@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   itemContainer: {
     width: 175,
     height: 250,
-    marginRight: 12,
+    marginLeft: 16,
     paddingLeft: 16,
     paddingRight: 16,
     borderRadius: 8,
