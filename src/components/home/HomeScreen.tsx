@@ -19,8 +19,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#f3f5f9',
   },
   container: {
-    left: 32,
     top: 52,
+    flex: 1,
+    flexDirection: 'column',
   },
   heading: {
     fontSize: 36,
@@ -28,5 +29,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#000',
     letterSpacing: 0.7,
+    left: 16,
   },
 });

@@ -22,12 +22,13 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: 32,
   },
   contentContainerStyle: {
     paddingBottom: 24,
     alignItems: 'center',
   },
   contentInsetStyle: {
-    right: 50,
+    right: 16,
   },
 });

@@ -82,14 +82,14 @@ const LoadingBox = ({ style, ...rest }: ViewProps) => (
 
 export const LoadingBookBox = () => {
   const boxes = new Array(3).fill(0);
-  const boxWidth = 100;
+  const boxWidth = 175;
 
   return (
     <View style={styles.container}>
       <Row>
         {boxes.map((_box, index) => (
           <LoadingBox key={index} style={{ width: boxWidth }}>
-            <LoadingRect width={boxWidth} height={100} />
+            <LoadingRect width={boxWidth} height={210} />
             <LoadingRect
               width={boxWidth - 65}
               height={20}
@@ -109,7 +109,8 @@ export const LoadingBookBox = () => {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 32,
+    marginTop: 32,
+    marginLeft: 16,
   },
   loadingRect: {
     borderRadius: 4,

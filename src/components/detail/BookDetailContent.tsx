@@ -24,7 +24,8 @@ export const BookDetailContent = ({ book }: BookDetailContentProps) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    margin: 32,
+    flexDirection: 'column',
+    margin: 16,
   },
   contentContainer: {
     alignItems: 'center',

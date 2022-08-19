@@ -8,21 +8,22 @@ type BookGenreBadgeProps = {
 export const BookGenreBadge = ({ genre }: BookGenreBadgeProps) => {
   return (
     <View style={styles.badgeContainer} accessibilityHint="Book genre badge">
-      <Text style={styles.text}>{genre}</Text>
+      <Text style={styles.text} numberOfLines={1}>
+        {genre}
+      </Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   badgeContainer: {
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
+    maxHeight: 42,
     paddingVertical: 4,
     paddingHorizontal: 8,
     borderRadius: 24,
-    borderWidth: 0.5,
-    maxHeight: 28,
-    borderColor: 'red',
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    textAlignVertical: 'center',
   },
   text: {
     color: 'grey',
