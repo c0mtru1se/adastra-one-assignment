@@ -29,6 +29,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   contentInsetStyle: {
-    right: 50,
+    right: 16,
   },
 });
