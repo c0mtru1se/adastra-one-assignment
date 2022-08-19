@@ -109,7 +109,7 @@ export const LoadingBookBox = () => {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 32,
+    marginTop: 32,
   },
   loadingRect: {
     borderRadius: 4,
